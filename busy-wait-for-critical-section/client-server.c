@@ -3,8 +3,9 @@
 #include <pthread.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <unistd.h>
 
-#define N 10000000 //10^7
+//#define N 10000000 //10^7
 
 #define MAX_THREADS 4 //2, 4
 
@@ -23,13 +24,14 @@ void *client_process_i(void *tid) {
   	while(respond != thid){
   		request = thid;
   	}
-    //sleep(1);
-    printf("Entrou %ld\n", thid);
-    //sleep(1);
+    sleep(1);
+    printf("Thread %ld entrou na SC.\n", thid);
 
   	critical_section();
   	respond = 0;
-    printf("Saiu %ld\n", thid);
+    
+    printf("Thread %ld saiu da SC.\n", thid);
+    sleep(1);
   }
  
   pthread_exit(0);
