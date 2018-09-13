@@ -40,12 +40,12 @@ double Random(void)
  */
 
 typedef struct {
-  double x, y, z;
-  double mass;
+  long double x, y, z;
+  long double mass;
 } Particle;
 typedef struct {
-  double xold, yold, zold;
-  double fx, fy, fz;
+  long double xold, yold, zold;
+  long double fx, fy, fz;
 } ParticleV;
 
 void InitParticles( Particle[], ParticleV [], int );
