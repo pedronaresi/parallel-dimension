@@ -4,6 +4,8 @@
 
 #define SIZE 10
 
+//Teste
+
 int main(int argc, char **argv)
 {
 	int data[SIZE], i, last_code=0;
